@@ -349,7 +349,21 @@ Used to manage transactions in a database.
 # **IV. How to Create a Table**  
 
 ## **1. CREATE Command**  
-Used to create a new table in a database.  
+Used to create a new table in a database.
+
+# **2. Constraints in CREATE TABLE**
+Constraints define rules for the data in columns.
+
+| Constraint | Description | Example |
+|------------|------------|---------|
+| **PRIMARY KEY** | Uniquely identifies each record | `id INT PRIMARY KEY` |
+| **NOT NULL** | Ensures the column cannot be empty | `name VARCHAR(50) NOT NULL` |
+| **UNIQUE** | Ensures all values in a column are different | `email VARCHAR(100) UNIQUE` |
+| **CHECK** | Ensures a column meets a condition | `age INT CHECK (age > 0)` |
+| **DEFAULT** | Assigns a default value if no value is provided | `status VARCHAR(10) DEFAULT 'active'` |
+| **FOREIGN KEY** | Links to a column in another table | `FOREIGN KEY (dept_id) REFERENCES departments(id)` |
+
+---
 
 ### **Syntax:**  
 ```sql
@@ -360,14 +374,46 @@ CREATE TABLE table_name (
     ...
 );
 ```
+
 ### **EXAMPLE:**  
 ```sql
 CREATE TABLE students (
-    id INT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR(50),
     age INT,
+    date_of_joining DATE,
     grade CHAR(2)
-    ...
 );
 ```
 
+## 3. **How `DESC students;` Works**
+The `DESC` (or `DESCRIBE`) command is used to display the structure of a table, showing column names, data types, and constraints.
+
+### **Command:**
+```sql
+DESC students;
+```
+
+### **Output:**
+| Field           | Type         | Null | Key  | Default | Extra |
+|----------------|-------------|------|------|---------|-------|
+| employee_id    | INT         | NO   | PRI  | NULL    |       |
+| employee_name  | VARCHAR(50) | YES  |      | NULL    |       |
+| age           | INT         | YES  |      | NULL    |       |
+| date_of_joining | DATE        | YES  |      | NULL    |       |
+| grade         | CHAR(2)     | YES  |      | NULL    |       |
+
+### **Explanation of Output:**
+- **Field:** Column name in the table.
+- **Type:** Data type of the column (`INT`, `VARCHAR(50)`, `DATE`, etc.).
+- **Null:** Indicates whether the column allows `NULL` values (`YES` means NULL values are allowed, `NO` means they aren't).
+- **Key:** Shows if the column is a primary key (`PRI`), foreign key (`FOR`), or unique key (`UNI`).
+- **Default:** Default value for the column (if specified).
+- **Extra:** Additional properties like `AUTO_INCREMENT`.
+
+### **Key Points:**
+- `employee_id` is marked as `PRI`, meaning it's a **Primary Key** and must be unique.
+- `employee_name`, `age`, `date_of_joining`, and `grade` allow `NULL` values.
+- `VARCHAR(50)` means `employee_name` can store up to 50 characters.
+- `DATE` ensures `date_of_joining` follows the format `YYYY-MM-DD`.
+```
