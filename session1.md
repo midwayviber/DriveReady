@@ -359,4 +359,15 @@ CREATE TABLE table_name (
     column_name3 data_type constraints,
     ...
 );
+```
+### **EXAMPLE:**  
+```sql
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    age INT,
+    grade CHAR(2)
+    ...
+);
+```
 
