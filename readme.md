@@ -1,13 +1,13 @@
 ### **10-Week DSA Roadmap (C++) – No Graphs/Trees**  
 
-Week 1: Arrays & Vectors
-Day 1: Arrays Basics (Traversals, Insertions, Deletions)
-Day 2: STL (vector, sort, reverse, push_back, pop_back)
-Day 3: Kadane’s Algorithm (Max Subarray Sum)
-Day 4: Prefix Sum (Subarray Sum, Range Queries)
-Day 5: Difference Array (Efficient Range Updates)
-Day 6: Merge Intervals (Handling Overlapping Intervals)
-Day 7: Practice Problems & Revision
+## **Week 1: Arrays & Vectors**  
+- **Day 1:** Arrays Basics (Traversals, Insertions, Deletions)  
+- **Day 2:** STL (`vector`, `sort`, `reverse`, `push_back`, `pop_back`)  
+- **Day 3:** Kadane’s Algorithm (Max Subarray Sum)  
+- **Day 4:** Prefix Sum (Subarray Sum, Range Queries)  
+- **Day 5:** Difference Array (Efficient Range Updates)  
+- **Day 6:** Merge Intervals (Handling Overlapping Intervals)  
+- **Day 7:** Practice Problems & Revision  
 
 | Day  | Topic                                      | Concepts Covered |
 |------|-------------------------------------------|------------------|
@@ -19,15 +19,29 @@ Day 7: Practice Problems & Revision
 | 6    | Merge Intervals                          | Handling Overlapping Intervals |
 | 7    | Practice & Revision                     | Solve Problems, Review Concepts |
 
+---
 
-## **Week 2: Sorting & Searching**  
-- **Day 1:** Selection Sort, Bubble Sort, Insertion Sort  
-- **Day 2:** Merge Sort & Quick Sort (Divide & Conquer)  
-- **Day 3:** Counting Sort, Radix Sort  
-- **Day 4:** Heap Sort  
-- **Day 5:** Binary Search Basics  
-- **Day 6:** Binary Search on Answer  
-- **Day 7:** Practice  
+## **Week 2: Sliding Window & Two Pointer**  
+
+- **Day 1:** Sliding Window Basics – Fixed & Variable Size, Template Understanding  
+- **Day 2:** Advanced Sliding Window – Longest Subarray, Distinct Elements, Min/Max Window  
+- **Day 3:** Two Pointer Basics (Less Focus) – Pair Sum, Finding Duplicates  
+- **Day 4:** Subarrays with Given Sum – Sliding Window + Prefix Sum Combination  
+- **Day 5:** Sliding Window Optimization – Shrinking & Expanding Window, Edge Cases  
+- **Day 6:** Practice Problems – Solve Easy & Medium Problems on Sliding Window & Two Pointers  
+- **Day 7:** More Practice & Revision – Review Concepts, Attempt More Problems  
+
+---
+
+## **Week 3: Searching & Sorting**  
+
+- **Day 1:** **Sorting Basics** – Bubble Sort, Selection Sort, Insertion Sort (Understanding How Sorting Works)  
+- **Day 2:** **Efficient Sorting** – Merge Sort & Quick Sort (Divide & Conquer Approach)  
+- **Day 3:** **Binary Search Basics** – Understanding Binary Search, Implementing Iterative & Recursive Approach  
+- **Day 4:** **Advanced Binary Search** – First & Last Occurrence, Lower Bound & Upper Bound  
+- **Day 5:** **Search in a Rotated Sorted Array** – Solving Variants of Rotated Search Problems  
+- **Day 6:** **Practice Problems** – Solve Sorting & Searching Questions (Easy & Medium)  
+- **Day 7:** **More Practice & Revision** – Attempt More Problems, Strengthen Concepts  
 
 ---
 
@@ -39,7 +53,6 @@ Day 7: Practice Problems & Revision
 - **Day 5:** Hashing + Sorting  
 - **Day 6:** Practice  
 - **Day 7:** Practice  
-
 ---
 
 ## **Week 4: Stack & Queue**  
@@ -117,4 +130,3 @@ Day 7: Practice Problems & Revision
 - **Day 6:** Problem Review & Analysis  
 - **Day 7:** Final Revision  
 
-Now, this roadmap covers only the most important topics with proper balance between learning and problem-solving.
