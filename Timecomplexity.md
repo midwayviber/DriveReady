@@ -1,4 +1,4 @@
-## Time Complexity
+# Time Complexity
 
 ### Definition:
 Time Complexity refers to the amount of time taken by an algorithm to run as a function of the input size (n). It helps in evaluating the efficiency of an algorithm.
