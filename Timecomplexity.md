@@ -296,3 +296,134 @@ void process(int arr[], int n) {
 - **Input and output operations are ignored** as they do not impact algorithmic efficiency.  
 - **The two-pointer approach runs in O(n) time**, even though it moves from both ends.  
 - **Final complexity remains O(n)** because all loops run sequentially, not nested.
+
+# **Recursion and Time Complexity**  
+
+## **1. Print Numbers from 1 to N (O(n))**  
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void printNumbers(int n) {
+    if (n == 0) return;  
+    printNumbers(n - 1);  
+    cout << n << " ";  
+}
+
+int main() {
+    int n = 10;
+    cout << "Numbers from 1 to " << n << ": ";
+    printNumbers(n);
+    cout << endl;
+    return 0;
+}
+```
+
+### **Time Complexity Calculation**  
+- The function calls itself `n` times.  
+- Each call does O(1) work.  
+- **Total complexity: O(n).**  
+
+---
+
+## **2. Sum of First N Numbers (O(n))**  
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int sum(int n) {
+    if (n == 0) return 0;
+    return n + sum(n - 1);
+}
+
+int main() {
+    int n = 10;
+    cout << "Sum of first " << n << " numbers: " << sum(n) << endl;
+    return 0;
+}
+```
+
+### **Time Complexity Calculation**  
+- The function calls itself `n` times.  
+- Each call does O(1) work.  
+- **Total complexity: O(n).**  
+
+---
+
+## **3. Print Even Numbers from N to 0 (O(n))**  
+
+```cpp
+#include <iostream>
+using namespace std;
+
+void printEven(int n) {
+    if (n <= 0) return;
+    printEven(n - 2);
+    cout << n << " ";
+}
+
+int main() {
+    int n = 10;
+    cout << "Even numbers from " << n << " to 0: ";
+    printEven(n);
+    cout << endl;
+    return 0;
+}
+```
+
+### **Time Complexity Calculation**  
+- The function reduces `n` by 2 each time.  
+- The number of calls is `n/2`.  
+- **Total complexity: O(n) (Since O(n/2) = O(n)).**  
+
+---
+
+## **4. Multiplication using Addition (O(n))**  
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int multiply(int a, int b) {
+    if (b == 0) return 0;
+    return a + multiply(a, b - 1);
+}
+
+int main() {
+    int a = 5, b = 3;
+    cout << "Multiplication of " << a << " and " << b << ": " << multiply(a, b) << endl;
+    return 0;
+}
+```
+
+### **Time Complexity Calculation**  
+- The function calls itself `b` times.  
+- Each call does O(1) work.  
+- **Total complexity: O(n) where n = b.**  
+
+---
+
+## **5. Factorial of a Number (O(n))**  
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int n = 5;
+    cout << "Factorial of " << n << ": " << factorial(n) << endl;
+    return 0;
+}
+```
+
+### **Time Complexity Calculation**  
+- The function calls itself `n` times.  
+- Each call does O(1) work.  
+- **Total complexity: O(n).**
