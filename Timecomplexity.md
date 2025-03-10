@@ -1,13 +1,13 @@
-# Time Complexity
+# **1. Time Complexity**
 
-### Definition:
+## **Definition:**
 Time Complexity refers to the amount of time taken by an algorithm to run as a function of the input size (n). It helps in evaluating the efficiency of an algorithm.
 
 ---
 
-### Example: Finding the number of even numbers from `1` to `N`
+# **2. Example: Finding the number of even numbers from `1` to `N`**
 
-#### **Approach 1: Using a Loop (O(n))**
+### **Approach 1: Using a Loop (O(n))**
 ```cpp
 #include <iostream>
 using namespace std;
@@ -28,7 +28,9 @@ int main() {
 - **Time Complexity: O(n)** (Linear Time Complexity)
 - As `n` increases, the number of iterations grows linearly.
 
-#### **Approach 2: Using Formula (O(1))**
+---
+
+### **Approach 2: Using Formula (O(1))**
 ```cpp
 #include <iostream>
 using namespace std;
@@ -47,9 +49,9 @@ int main() {
 
 ---
 
-## **Big O, Theta (Θ), and Omega (Ω) Notations**
+# **3. Big O, Theta (Θ), and Omega (Ω) Notations**
 
-### **1. Big O Notation (O)**
+## **3.1 Big O Notation (O)**
 - Represents the **worst-case** scenario.
 - Upper bound on the time complexity.
 - **Example:** If an algorithm runs in `O(n^2)`, it means for large `n`, the execution time grows at most proportional to `n^2`.
@@ -69,7 +71,7 @@ void exampleFunction(int n) {
 
 ---
 
-### **2. Theta Notation (Θ)**
+## **3.2 Theta Notation (Θ)**
 - Represents the **average-case** scenario.
 - It gives both an upper and lower bound.
 - **Example:** If an algorithm is `Θ(n)`, it means it always takes `cn` time for some constant `c`.
@@ -87,7 +89,7 @@ void exampleFunctionTheta(int n) {
 
 ---
 
-### **3. Omega Notation (Ω)**
+## **3.3 Omega Notation (Ω)**
 - Represents the **best-case** scenario.
 - Lower bound on the time complexity.
 - **Example:** If an algorithm runs in `Ω(n)`, it means it will take at least `n` operations in the best case.
@@ -117,16 +119,11 @@ int linearSearch(int arr[], int n, int key) {
 
 These notations help analyze the efficiency of algorithms and make informed decisions in problem-solving. 🚀
 
-## Time Complexity
-
-### Definition:
-Time Complexity refers to the amount of time taken by an algorithm to run as a function of the input size (n). It helps in evaluating the efficiency of an algorithm and comparing different approaches.
-
 ---
 
-### **Common Time Complexities with Examples**
+# **4. Common Time Complexities with Examples**
 
-#### **O(1) - Constant Time**
+## **4.1 O(1) - Constant Time**
 - Example: Picking a book from a shelf.
 - Code Analogy: Accessing an element in an array.
 ```cpp
@@ -135,7 +132,9 @@ int getFirstElement(vector<int> &arr) {
 }
 ```
 
-#### **O(n) - Linear Time**
+---
+
+## **4.2 O(n) - Linear Time**
 - Example: Reading a book page by page.
 - Code Analogy: Traversing an array.
 ```cpp
@@ -146,7 +145,9 @@ void printArray(vector<int> &arr) {
 }
 ```
 
-#### **O(log n) - Logarithmic Time**
+---
+
+## **4.3 O(log n) - Logarithmic Time**
 - Example: Searching for a word in a dictionary by flipping pages in halves.
 - Code Analogy: Binary Search.
 ```cpp
@@ -162,7 +163,9 @@ int binarySearch(vector<int> &arr, int target) {
 }
 ```
 
-#### **O(n²) - Quadratic Time**
+---
+
+## **4.4 O(n²) - Quadratic Time**
 - Example: Comparing each student in a class with every other student.
 - Code Analogy: Nested loops.
 ```cpp
@@ -175,7 +178,9 @@ void printPairs(vector<int> &arr) {
 }
 ```
 
-#### **O(n³) - Cubic Time**
+---
+
+## **4.5 O(n³) - Cubic Time**
 - Example: Checking all possible group combinations in a class of students.
 - Code Analogy: Triple nested loops.
 ```cpp
@@ -190,7 +195,9 @@ void printTriplets(vector<int> &arr) {
 }
 ```
 
-#### **O(n log n) - Linearithmic Time**
+---
+
+## **4.6 O(n log n) - Linearithmic Time**
 - Example: Organizing a bookshelf by dividing books into groups and sorting them.
 - Code Analogy: Merge Sort.
 ```cpp
@@ -203,7 +210,9 @@ void mergeSort(vector<int> &arr, int left, int right) {
 }
 ```
 
-#### **O(n!) - Factorial Time**
+---
+
+## **4.7 O(n!) - Factorial Time**
 - Example: Arranging people in all possible seating orders.
 - Code Analogy: Generating all permutations.
 ```cpp
@@ -236,15 +245,18 @@ void permute(vector<int> &arr, int l, int r) {
 
 Understanding these complexities helps in choosing efficient algorithms for different problems. 🚀
 
+---
 
-# **Time Complexity Calculation: Procedural Phase Only**  
+# **5. Time Complexity Calculation: Procedural Phase Only**
 
-## **Why Don't We Add Time Complexities?**  
+## **5.1 Why Don't We Add Time Complexities?**
 - When analyzing time complexity, we focus only on the **procedural phase** (core logic of the algorithm).  
 - Input (I/O) operations like reading values or printing results are generally **O(1) or O(n)** and are **not considered** in complexity calculations.  
 - We do **not add complexities**; instead, we take the **dominant term** (the highest order of growth).  
 
-## **Code Example**  
+---
+
+## **5.2 Code Example**
 ```cpp
 void process(int arr[], int n) {
     // Input Phase (Ignored in Complexity)
@@ -267,7 +279,9 @@ void process(int arr[], int n) {
 }
 ```
 
-## **Step-by-Step Complexity Analysis**  
+---
+
+## **5.3 Step-by-Step Complexity Analysis**
 
 1. **For Loop (Input Phase)**  
    - Runs **n times**.  
@@ -284,23 +298,28 @@ void process(int arr[], int n) {
    - Each iteration takes **O(1)** time.  
    - **Ignored in final complexity calculation**.  
 
-## **Final Complexity Calculation**  
+---
+
+## **5.4 Final Complexity Calculation**
 - **Input For Loop** → O(n) (Ignored)  
 - **While Loop (Two-Pointer)** → O(n) (Considered)  
 - **Output For Loop** → O(n) (Ignored)  
 
 **Final Complexity: O(n)**  
 
-## **Key Takeaways**  
+---
+
+## **5.5 Key Takeaways**
 - **Only the procedural phase is considered** in complexity analysis.  
 - **Input and output operations are ignored** as they do not impact algorithmic efficiency.  
 - **The two-pointer approach runs in O(n) time**, even though it moves from both ends.  
 - **Final complexity remains O(n)** because all loops run sequentially, not nested.
 
-# **Recursion and Time Complexity**  
+---
 
-## **1. Print Numbers from 1 to N (O(n))**  
+# **6. Recursion and Time Complexity**
 
+## **6.1 Print Numbers from 1 to N (O(n))**
 ```cpp
 #include <iostream>
 using namespace std;
@@ -319,16 +338,12 @@ int main() {
     return 0;
 }
 ```
-
-### **Time Complexity Calculation**  
-- The function calls itself `n` times.  
-- Each call does O(1) work.  
-- **Total complexity: O(n).**  
+- **Time Complexity: O(n)**  
+- **Reason:** The function calls itself `n` times, and each call does O(1) work.
 
 ---
 
-## **2. Sum of First N Numbers (O(n))**  
-
+## **6.2 Sum of First N Numbers (O(n))**
 ```cpp
 #include <iostream>
 using namespace std;
@@ -344,16 +359,12 @@ int main() {
     return 0;
 }
 ```
-
-### **Time Complexity Calculation**  
-- The function calls itself `n` times.  
-- Each call does O(1) work.  
-- **Total complexity: O(n).**  
+- **Time Complexity: O(n)**  
+- **Reason:** The function calls itself `n` times, and each call does O(1) work.
 
 ---
 
-## **3. Print Even Numbers from N to 0 (O(n))**  
-
+## **6.3 Print Even Numbers from N to 0 (O(n))**
 ```cpp
 #include <iostream>
 using namespace std;
@@ -372,16 +383,12 @@ int main() {
     return 0;
 }
 ```
-
-### **Time Complexity Calculation**  
-- The function reduces `n` by 2 each time.  
-- The number of calls is `n/2`.  
-- **Total complexity: O(n) (Since O(n/2) = O(n)).**  
+- **Time Complexity: O(n)**  
+- **Reason:** The function reduces `n` by 2 each time, resulting in `n/2` calls. Since O(n/2) = O(n).
 
 ---
 
-## **4. Multiplication using Addition (O(n))**  
-
+## **6.4 Multiplication using Addition (O(n))**
 ```cpp
 #include <iostream>
 using namespace std;
@@ -397,16 +404,12 @@ int main() {
     return 0;
 }
 ```
-
-### **Time Complexity Calculation**  
-- The function calls itself `b` times.  
-- Each call does O(1) work.  
-- **Total complexity: O(n) where n = b.**  
+- **Time Complexity: O(n)**  
+- **Reason:** The function calls itself `b` times, and each call does O(1) work.
 
 ---
 
-## **5. Factorial of a Number (O(n))**  
-
+## **6.5 Factorial of a Number (O(n))**
 ```cpp
 #include <iostream>
 using namespace std;
@@ -422,8 +425,8 @@ int main() {
     return 0;
 }
 ```
+- **Time Complexity: O(n)**  
+- **Reason:** The function calls itself `n` times, and each call does O(1) work.
 
-### **Time Complexity Calculation**  
-- The function calls itself `n` times.  
-- Each call does O(1) work.  
-- **Total complexity: O(n).**
+---
+
