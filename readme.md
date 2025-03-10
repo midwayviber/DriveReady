@@ -9,12 +9,7 @@
 - **Day 6:** Merge Intervals (Handling Overlapping Intervals)  
 - **Day 7:** Practice Problems & Revision  
 
-# 📅 Week 1: Arrays & Vectors - Advanced Coding Sheet
-
-## **📌 Problem List with Links**
-Got it! Here’s a **detailed breakdown** of **10+ problems** for **each topic** as per your request:
-
----
+# 📅 Week 1: Arrays & Vectors - Advanced Coding Sheet:
 
 ## **📌 Day 1: Arrays Basics (Traversals, Insertions, Deletions)**  
 1. **[Find the Largest Element in an Array](https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/)** (Easy)  
@@ -29,6 +24,14 @@ Got it! Here’s a **detailed breakdown** of **10+ problems** for **each topic**
 10. **[Find the Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)** (Easy)  
 11. **[Find the Union of Two Arrays](https://www.geeksforgeeks.org/find-union-and-intersection-of-two-unsorted-arrays/)** (Medium)  
 12. **[Find Leaders in an Array](https://www.geeksforgeeks.org/leaders-in-an-array/)** (Medium)  
+13. **[Find Majority Element](https://leetcode.com/problems/majority-element/)** (Easy)  
+14. **[Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/)** (Medium)  
+15. **[Find the Single Non-Duplicate Element](https://leetcode.com/problems/single-number/)** (Easy)  
+16. **[Find the First Missing Positive](https://leetcode.com/problems/first-missing-positive/)** (Hard)  
+17. **[Find the Kth Smallest Element](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/)** (Medium)  
+18. **[Sort an Array of 0s, 1s, and 2s](https://leetcode.com/problems/sort-colors/)** (Medium)  
+19. **[Find the Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)** (Medium)  
+20. **[Check if Two Arrays are Equal](https://www.geeksforgeeks.org/check-if-two-arrays-are-equal-or-not/)** (Easy)  
 
 ---
 
@@ -45,6 +48,14 @@ Got it! Here’s a **detailed breakdown** of **10+ problems** for **each topic**
 10. **[Binary Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)** (Medium)  
 11. **[Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)** (Hard)  
 12. **[Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)** (Medium)  
+13. **[Find All Pairs with Given Sum](https://www.geeksforgeeks.org/count-pairs-with-given-sum/)** (Easy)  
+14. **[Find Subarray with Given Sum](https://www.geeksforgeeks.org/find-subarray-with-given-sum/)** (Medium)  
+15. **[Find the First and Last Position of Element](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)** (Medium)  
+16. **[Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/)** (Medium)  
+17. **[Find the K Weakest Rows in a Matrix](https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/)** (Easy)  
+18. **[Find the K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)** (Medium)  
+19. **[Find the Largest Unique Number](https://leetcode.com/problems/largest-unique-number/)** (Easy)  
+20. **[Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally/)** (Medium)  
 
 ---
 
@@ -59,6 +70,16 @@ Got it! Here’s a **detailed breakdown** of **10+ problems** for **each topic**
 8. **[Maximum Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)** (Medium)  
 9. **[Maximum Sum of Three Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/)** (Hard)  
 10. **[Maximum Sum of K Consecutive Elements](https://www.geeksforgeeks.org/window-sliding-technique/)** (Medium)  
+11. **[Largest Sum Contiguous Subarray of Size K](https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/)** (Medium)  
+12. **[Find Maximum Sum of a Strictly Increasing Subarray](https://www.geeksforgeeks.org/find-maximum-sum-strictly-increasing-subarray/)** (Medium)  
+13. **[Find the Longest Subarray with Absolute Difference Less Than K](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/)** (Medium)  
+14. **[Find the Maximum Alternating Subarray Sum](https://www.geeksforgeeks.org/maximum-sum-alternating-subsequence-sum/)** (Medium)  
+15. **[Find the Maximum Subarray Sum with One Deletion](https://leetcode.com/problems/maximum-subarray-sum-with-one-deletion/)** (Medium)  
+16. **[Find the Maximum Sum of a Subarray with at Most K Changes](https://leetcode.com/problems/maximum-subarray-sum-after-one-operation/)** (Medium)  
+17. **[Find the Longest Mountain in an Array](https://leetcode.com/problems/longest-mountain-in-array/)** (Medium)  
+18. **[Find the Minimum Number of Flips to Make an Alternating Binary String](https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/)** (Easy)  
+19. **[Find the Maximum Sum of a Zigzag Sequence](https://www.geeksforgeeks.org/maximum-zigzag-sequence-sum/)** (Medium)  
+20. **[Find the Maximum Subarray Sum with Constraints](https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/)** (Hard)  
 
 ---
 
