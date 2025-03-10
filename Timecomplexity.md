@@ -117,5 +117,124 @@ int linearSearch(int arr[], int n, int key) {
 
 These notations help analyze the efficiency of algorithms and make informed decisions in problem-solving. 🚀
 
+## Time Complexity
+
+### Definition:
+Time Complexity refers to the amount of time taken by an algorithm to run as a function of the input size (n). It helps in evaluating the efficiency of an algorithm and comparing different approaches.
+
+---
+
+### **Common Time Complexities with Examples**
+
+#### **O(1) - Constant Time**
+- Example: Picking a book from a shelf.
+- Code Analogy: Accessing an element in an array.
+```cpp
+int getFirstElement(vector<int> &arr) {
+    return arr[0]; // Always takes the same time, no matter the size of arr
+}
+```
+
+#### **O(n) - Linear Time**
+- Example: Reading a book page by page.
+- Code Analogy: Traversing an array.
+```cpp
+void printArray(vector<int> &arr) {
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << " ";
+    }
+}
+```
+
+#### **O(log n) - Logarithmic Time**
+- Example: Searching for a word in a dictionary by flipping pages in halves.
+- Code Analogy: Binary Search.
+```cpp
+int binarySearch(vector<int> &arr, int target) {
+    int left = 0, right = arr.size() - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+```
+
+#### **O(n²) - Quadratic Time**
+- Example: Comparing each student in a class with every other student.
+- Code Analogy: Nested loops.
+```cpp
+void printPairs(vector<int> &arr) {
+    for (int i = 0; i < arr.size(); i++) {
+        for (int j = 0; j < arr.size(); j++) {
+            cout << "(" << arr[i] << ", " << arr[j] << ")\n";
+        }
+    }
+}
+```
+
+#### **O(n³) - Cubic Time**
+- Example: Checking all possible group combinations in a class of students.
+- Code Analogy: Triple nested loops.
+```cpp
+void printTriplets(vector<int> &arr) {
+    for (int i = 0; i < arr.size(); i++) {
+        for (int j = 0; j < arr.size(); j++) {
+            for (int k = 0; k < arr.size(); k++) {
+                cout << "(" << arr[i] << ", " << arr[j] << ", " << arr[k] << ")\n";
+            }
+        }
+    }
+}
+```
+
+#### **O(n log n) - Linearithmic Time**
+- Example: Organizing a bookshelf by dividing books into groups and sorting them.
+- Code Analogy: Merge Sort.
+```cpp
+void mergeSort(vector<int> &arr, int left, int right) {
+    if (left >= right) return;
+    int mid = left + (right - left) / 2;
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid + 1, right);
+    // Merging step (not shown for brevity)
+}
+```
+
+#### **O(n!) - Factorial Time**
+- Example: Arranging people in all possible seating orders.
+- Code Analogy: Generating all permutations.
+```cpp
+void permute(vector<int> &arr, int l, int r) {
+    if (l == r) {
+        for (int num : arr) cout << num << " ";
+        cout << "\n";
+        return;
+    }
+    for (int i = l; i <= r; i++) {
+        swap(arr[l], arr[i]);
+        permute(arr, l + 1, r);
+        swap(arr[l], arr[i]);
+    }
+}
+```
+
+---
+
+### **Summary of Time Complexities**
+| Notation | Example Analogy | Complexity |
+|----------|------------------|------------|
+| **O(1)** | Picking a book from a shelf | Constant |
+| **O(n)** | Reading a book page by page | Linear |
+| **O(log n)** | Searching for a word in a dictionary | Logarithmic |
+| **O(n²)** | Comparing every student with every other | Quadratic |
+| **O(n³)** | Checking all possible groups of students | Cubic |
+| **O(n log n)** | Sorting books by dividing into groups | Linearithmic |
+| **O(n!)** | Arranging people in all possible seating orders | Factorial |
+
+Understanding these complexities helps in choosing efficient algorithms for different problems. 🚀
+
 
 
