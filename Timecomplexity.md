@@ -237,4 +237,62 @@ void permute(vector<int> &arr, int l, int r) {
 Understanding these complexities helps in choosing efficient algorithms for different problems. 🚀
 
 
+# **Time Complexity Calculation: Procedural Phase Only**  
 
+## **Why Don't We Add Time Complexities?**  
+- When analyzing time complexity, we focus only on the **procedural phase** (core logic of the algorithm).  
+- Input (I/O) operations like reading values or printing results are generally **O(1) or O(n)** and are **not considered** in complexity calculations.  
+- We do **not add complexities**; instead, we take the **dominant term** (the highest order of growth).  
+
+## **Code Example**  
+```cpp
+void process(int arr[], int n) {
+    // Input Phase (Ignored in Complexity)
+    for (int i = 0; i < n; i++) {  // O(n)
+        cin >> arr[i];
+    }
+
+    // Two-pointer approach (Procedural Phase)
+    int left = 0, right = n - 1;
+    while (left < right) {  // O(n)
+        cout << arr[left] << " " << arr[right] << " ";
+        left++;
+        right--;
+    }
+
+    // Output Phase (Ignored in Complexity)
+    for (int i = 0; i < n; i++) {  // O(n)
+        cout << arr[i] << " ";
+    }
+}
+```
+
+## **Step-by-Step Complexity Analysis**  
+
+1. **For Loop (Input Phase)**  
+   - Runs **n times**.  
+   - Each iteration takes **O(1)** time.  
+   - **Ignored in final complexity calculation**.  
+
+2. **While Loop (Two-Pointer Approach)**  
+   - Moves two pointers from both ends toward the center.  
+   - Covers **n elements** in **O(n) time**.  
+   - **Considered in complexity analysis**.  
+
+3. **For Loop (Output Phase)**  
+   - Runs **n times**.  
+   - Each iteration takes **O(1)** time.  
+   - **Ignored in final complexity calculation**.  
+
+## **Final Complexity Calculation**  
+- **Input For Loop** → O(n) (Ignored)  
+- **While Loop (Two-Pointer)** → O(n) (Considered)  
+- **Output For Loop** → O(n) (Ignored)  
+
+**Final Complexity: O(n)**  
+
+## **Key Takeaways**  
+- **Only the procedural phase is considered** in complexity analysis.  
+- **Input and output operations are ignored** as they do not impact algorithmic efficiency.  
+- **The two-pointer approach runs in O(n) time**, even though it moves from both ends.  
+- **Final complexity remains O(n)** because all loops run sequentially, not nested.
