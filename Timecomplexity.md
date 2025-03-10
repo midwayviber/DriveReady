@@ -430,3 +430,141 @@ int main() {
 
 ---
 
+# 7. **Step-by-Step Optimization of Prime Number Checking**
+
+## **1. Brute Force Approach**
+The simplest way to check if a number `n` is prime is to test divisibility by all integers from `2` to `n-1`.
+
+**Code:**
+```python
+def is_prime_brute_force(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+```
+
+**Time Complexity:**  
+- **Worst Case:** \( O(n) \)  
+- **Explanation:** The loop runs from `2` to `n-1`, so for large `n`, this is inefficient.
+
+---
+
+## **2. Optimize Loop Range (Up to √n)**
+A key observation is that if `n` is not prime, it must have at least one divisor less than or equal to `√n`. So, we only need to check divisibility up to `√n`.
+
+**Code:**
+```python
+import math
+
+def is_prime_optimized(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+```
+
+**Time Complexity:**  
+- **Worst Case:** \( O(\sqrt{n}) \)  
+- **Explanation:** The loop now runs from `2` to `√n`, which is significantly faster for large `n`.
+
+---
+
+## **3. Skip Even Numbers (Except 2)**
+All even numbers greater than `2` are not prime. So, we can skip even numbers after checking for divisibility by `2`.
+
+**Code:**
+```python
+import math
+
+def is_prime_skip_evens(n):
+    if n <= 1:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(math.sqrt(n)) + 1, 2):  # Check only odd numbers
+        if n % i == 0:
+            return False
+    return True
+```
+
+**Time Complexity:**  
+- **Worst Case:** \( O(\sqrt{n}) \)  
+- **Explanation:** The loop now runs only for odd numbers, reducing the number of iterations by half.
+
+---
+
+## **4. Use 6k ± 1 Optimization**
+All primes greater than `3` are of the form `6k ± 1`. This further reduces the number of iterations.
+
+**Code:**
+```python
+import math
+
+def is_prime_6k_optimized(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+```
+
+**Time Complexity:**  
+- **Worst Case:** \( O(\sqrt{n}) \)  
+- **Explanation:** The loop now checks only numbers of the form `6k ± 1`, reducing the number of iterations further.
+
+---
+
+## **5. Sieve of Eratosthenes (Precompute Primes)**
+If you need to check primality for multiple numbers, precompute primes using the Sieve of Eratosthenes.
+
+**Code:**
+```python
+def sieve_of_eratosthenes(limit):
+    sieve = [True] * (limit + 1)
+    sieve[0] = sieve[1] = False
+    for i in range(2, int(math.sqrt(limit)) + 1):
+        if sieve[i]:
+            for j in range(i * i, limit + 1, i):
+                sieve[j] = False
+    return sieve
+
+# Example usage:
+limit = 100
+sieve = sieve_of_eratosthenes(limit)
+def is_prime_sieve(n):
+    if n <= limit:
+        return sieve[n]
+    else:
+        # Fallback to optimized method for numbers > limit
+        return is_prime_6k_optimized(n)
+```
+
+**Time Complexity:**  
+- **Precomputation:** \( O(n \log \log n) \)  
+- **Query:** \( O(1) \) for numbers ≤ limit, \( O(\sqrt{n}) \) for numbers > limit.
+
+---
+
+# **Summary of Optimizations**
+1. **Brute Force:** \( O(n) \)  
+2. **Optimize Loop Range (√n):** \( O(\sqrt{n}) \)  
+3. **Skip Even Numbers:** \( O(\sqrt{n}) \) (but fewer iterations)  
+4. **6k ± 1 Optimization:** \( O(\sqrt{n}) \) (even fewer iterations)  
+5. **Sieve of Eratosthenes:** \( O(n \log \log n) \) for precomputation, \( O(1) \) for queries.
+
+S## **Most Optimized Approach**
+For a single query, use the **6k ± 1 optimization**. For multiple queries, use the **Sieve of Eratosthenes**.
