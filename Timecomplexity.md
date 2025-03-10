@@ -430,20 +430,30 @@ int main() {
 
 ---
 
-# 7. **Step-by-Step Optimization of Prime Number Checking**
-
-## **1. Brute Force Approach**
+### **1. Brute Force Approach**
 The simplest way to check if a number `n` is prime is to test divisibility by all integers from `2` to `n-1`.
 
 **Code:**
-```python
-def is_prime_brute_force(n):
-    if n <= 1:
-        return False
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
+```cpp
+#include <iostream>
+using namespace std;
+
+bool isPrimeBruteForce(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n = 29;
+    if (isPrimeBruteForce(n))
+        cout << n << " is prime." << endl;
+    else
+        cout << n << " is not prime." << endl;
+    return 0;
+}
 ```
 
 **Time Complexity:**  
@@ -452,20 +462,31 @@ def is_prime_brute_force(n):
 
 ---
 
-## **2. Optimize Loop Range (Up to √n)**
-A key observation is that if `n` is not prime, it must have at least one divisor less than or equal to `√n`. So, we only need to check divisibility up to `√n`.
+### **2. Optimize Loop Range (Up to √n)**
+If `n` is not prime, it must have at least one divisor less than or equal to `√n`. So, we only need to check divisibility up to `√n`.
 
 **Code:**
-```python
-import math
+```cpp
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-def is_prime_optimized(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    return True
+bool isPrimeOptimized(int n) {
+    if (n <= 1) return false;
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n = 29;
+    if (isPrimeOptimized(n))
+        cout << n << " is prime." << endl;
+    else
+        cout << n << " is not prime." << endl;
+    return 0;
+}
 ```
 
 **Time Complexity:**  
@@ -474,24 +495,33 @@ def is_prime_optimized(n):
 
 ---
 
-## **3. Skip Even Numbers (Except 2)**
+### **3. Skip Even Numbers (Except 2)**
 All even numbers greater than `2` are not prime. So, we can skip even numbers after checking for divisibility by `2`.
 
 **Code:**
-```python
-import math
+```cpp
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-def is_prime_skip_evens(n):
-    if n <= 1:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-    for i in range(3, int(math.sqrt(n)) + 1, 2):  # Check only odd numbers
-        if n % i == 0:
-            return False
-    return True
+bool isPrimeSkipEvens(int n) {
+    if (n <= 1) return false;
+    if (n == 2) return true;
+    if (n % 2 == 0) return false;
+    for (int i = 3; i <= sqrt(n); i += 2) { // Check only odd numbers
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n = 29;
+    if (isPrimeSkipEvens(n))
+        cout << n << " is prime." << endl;
+    else
+        cout << n << " is not prime." << endl;
+    return 0;
+}
 ```
 
 **Time Complexity:**  
@@ -500,26 +530,33 @@ def is_prime_skip_evens(n):
 
 ---
 
-## **4. Use 6k ± 1 Optimization**
+### **4. Use 6k ± 1 Optimization**
 All primes greater than `3` are of the form `6k ± 1`. This further reduces the number of iterations.
 
 **Code:**
-```python
-import math
+```cpp
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-def is_prime_6k_optimized(n):
-    if n <= 1:
-        return False
-    if n <= 3:
-        return True
-    if n % 2 == 0 or n % 3 == 0:
-        return False
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-        i += 6
-    return True
+bool isPrime6kOptimized(int n) {
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+    for (int i = 5; i * i <= n; i += 6) {
+        if (n % i == 0 || n % (i + 2) == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n = 29;
+    if (isPrime6kOptimized(n))
+        cout << n << " is prime." << endl;
+    else
+        cout << n << " is not prime." << endl;
+    return 0;
+}
 ```
 
 **Time Complexity:**  
@@ -528,29 +565,54 @@ def is_prime_6k_optimized(n):
 
 ---
 
-## **5. Sieve of Eratosthenes (Precompute Primes)**
+### **5. Sieve of Eratosthenes (Precompute Primes)**
 If you need to check primality for multiple numbers, precompute primes using the Sieve of Eratosthenes.
 
 **Code:**
-```python
-def sieve_of_eratosthenes(limit):
-    sieve = [True] * (limit + 1)
-    sieve[0] = sieve[1] = False
-    for i in range(2, int(math.sqrt(limit)) + 1):
-        if sieve[i]:
-            for j in range(i * i, limit + 1, i):
-                sieve[j] = False
-    return sieve
+```cpp
+#include <iostream>
+#include <vector>
+#include <cmath>
+using namespace std;
 
-# Example usage:
-limit = 100
-sieve = sieve_of_eratosthenes(limit)
-def is_prime_sieve(n):
-    if n <= limit:
-        return sieve[n]
-    else:
-        # Fallback to optimized method for numbers > limit
-        return is_prime_6k_optimized(n)
+vector<bool> sieveOfEratosthenes(int limit) {
+    vector<bool> sieve(limit + 1, true);
+    sieve[0] = sieve[1] = false;
+    for (int i = 2; i <= sqrt(limit); i++) {
+        if (sieve[i]) {
+            for (int j = i * i; j <= limit; j += i) {
+                sieve[j] = false;
+            }
+        }
+    }
+    return sieve;
+}
+
+bool isPrimeSieve(int n, vector<bool>& sieve) {
+    if (n <= sieve.size() - 1) return sieve[n];
+    else {
+        // Fallback to optimized method for numbers > limit
+        if (n <= 1) return false;
+        if (n <= 3) return true;
+        if (n % 2 == 0 || n % 3 == 0) return false;
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) return false;
+        }
+        return true;
+    }
+}
+
+int main() {
+    int limit = 100;
+    vector<bool> sieve = sieveOfEratosthenes(limit);
+
+    int n = 29;
+    if (isPrimeSieve(n, sieve))
+        cout << n << " is prime." << endl;
+    else
+        cout << n << " is not prime." << endl;
+    return 0;
+}
 ```
 
 **Time Complexity:**  
@@ -559,12 +621,14 @@ def is_prime_sieve(n):
 
 ---
 
-# **Summary of Optimizations**
+### **Summary of Optimizations**
 1. **Brute Force:** \( O(n) \)  
 2. **Optimize Loop Range (√n):** \( O(\sqrt{n}) \)  
 3. **Skip Even Numbers:** \( O(\sqrt{n}) \) (but fewer iterations)  
 4. **6k ± 1 Optimization:** \( O(\sqrt{n}) \) (even fewer iterations)  
 5. **Sieve of Eratosthenes:** \( O(n \log \log n) \) for precomputation, \( O(1) \) for queries.
 
-S## **Most Optimized Approach**
+---
+
+### **Most Optimized Approach**
 For a single query, use the **6k ± 1 optimization**. For multiple queries, use the **Sieve of Eratosthenes**.
