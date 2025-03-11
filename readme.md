@@ -16,7 +16,7 @@
 2. **[Reverse an Array](https://leetcode.com/problems/reverse-string/)** (Easy)  
 3. **[Find Second Largest Element](https://www.geeksforgeeks.org/second-largest-element-array/)** (Easy) x
 4. **[Check if Array is Sorted](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)** (Medium)  
-5. **[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)** (Easy)  
+5. **[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)** (Easy)  x
 6. **[Move Zeroes to End](https://leetcode.com/problems/move-zeroes/)** (Easy)  
 7. **[Rotate Array by K Positions](https://leetcode.com/problems/rotate-array/)** (Medium)  
 8. **[Find the Missing Number](https://leetcode.com/problems/missing-number/)** (Easy)  
