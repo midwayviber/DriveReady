@@ -1,7 +1,3 @@
-Here’s the complete markdown notes with all GCD methods, explanations, and time complexities.  
-
----
-
 # **Greatest Common Divisor (GCD)**  
 
 ## **Definition**  
