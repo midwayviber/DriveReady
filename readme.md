@@ -12,7 +12,7 @@
 # 📅 Week 1: Arrays & Vectors - Advanced Coding Sheet:
 
 ## **📌 Day 1: Arrays Basics (Traversals, Insertions, Deletions)**  
-1. **[Find the Largest Element in an Array](https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/)** (Easy)  
+1. **[Find the Largest Element in an Array](https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/)** (Easy)  []
 2. **[Reverse an Array](https://leetcode.com/problems/reverse-string/)** (Easy)  
 3. **[Find Second Largest Element](https://www.geeksforgeeks.org/second-largest-element-array/)** (Easy) x
 4. **[Check if Array is Sorted](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/)** (Medium)  
