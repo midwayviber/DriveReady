@@ -29,8 +29,8 @@
 - [x] 15. **[Find the Single Non-Duplicate Element](https://leetcode.com/problems/single-number/)** (Easy)  
 - [x] 16. **[Find the First Missing Positive](https://leetcode.com/problems/first-missing-positive/)** (Hard)  
 - [ ] 17. **[Find the Kth Smallest Element](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/)** (Medium)  
-- [ ] 18. **[Sort an Array of 0s, 1s, and 2s](https://leetcode.com/problems/sort-colors/)** (Medium)  
-- [ ] 19. **[Find the Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)** (Medium)  
+- [x] 18. **[Sort an Array of 0s, 1s, and 2s](https://leetcode.com/problems/sort-colors/)** (Medium)  
+- [x] 19. **[Find the Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)** (Medium)  
 - [ ] 20. **[Check if Two Arrays are Equal](https://www.geeksforgeeks.org/check-if-two-arrays-are-equal-or-not/)** (Easy)  
 
 ---
