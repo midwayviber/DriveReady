@@ -31,7 +31,7 @@
 - [x] 17. **[Find the Kth Smallest Element](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/)** (Medium)  
 - [x] 18. **[Sort an Array of 0s, 1s, and 2s](https://leetcode.com/problems/sort-colors/)** (Medium)  
 - [x] 19. **[Find the Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)** (Medium)  
-- [x] 20. **[Check if Two Arrays are Equal](https://www.geeksforgeeks.org/check-if-two-arrays-are-equal-or-not/)** (Easy)  
+- [ ] 20. **[Check if Two Arrays are Equal](https://www.geeksforgeeks.org/check-if-two-arrays-are-equal-or-not/)** (Easy)  
 
 ---
 
