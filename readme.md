@@ -64,7 +64,7 @@
 - [ ] 2. **[Circular Maximum Subarray Sum](https://leetcode.com/problems/maximum-sum-circular-subarray/)** (Medium)  
 - [ ] 3. **[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)** (Medium)  
 - [ ] 4. **[Longest Subarray with Sum K](https://www.geeksforgeeks.org/longest-sub-array-sum-k/)** (Medium)  
-- [ ] 5. **[Maximum Sum Rectangle in 2D Matrix](https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/)** (Hard)  
+- [x] 5. **[Maximum Sum Rectangle in 2D Matrix](https://www.geeksforgeeks.org/maximum-sum-rectangle-in-a-2d-matrix-dp-27/)** (Hard)  
 - [ ] 6. **[Count Number of Subarrays with Given Sum](https://leetcode.com/problems/subarray-sum-equals-k/)** (Medium)  
 - [ ] 7. **[Longest Subarray with Equal 0s and 1s](https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/)** (Medium)  
 - [ ] 8. **[Maximum Sum of Two Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/)** (Medium)  
